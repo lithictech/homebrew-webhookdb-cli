@@ -5,20 +5,20 @@
 class Webhookdb < Formula
   desc "Query and store any API in real-time with SQL. More at https://webhookdb.com"
   homepage "https://webhookdb.com"
-  version "0.12.2"
+  version "0.13.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/lithictech/webhookdb-cli/releases/download/0.12.2/webhookdb_0.12.2_macos_arm64.tar.gz"
-      sha256 "11e6b7cf1de27e99ca583aa7de2593cb34dbebb9cb39cce6d5a748044dd7722a"
+    if Hardware::CPU.intel?
+      url "https://github.com/webhookdb/webhookdb-cli/releases/download/0.13.0/webhookdb_0.13.0_macos_x86_64.tar.gz"
+      sha256 "17c0e71169ff3b437d9143856a5cda631736673de845fa3a44cc0a2992437f93"
 
       def install
         bin.install "webhookdb"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/lithictech/webhookdb-cli/releases/download/0.12.2/webhookdb_0.12.2_macos_x86_64.tar.gz"
-      sha256 "a797a35a6a2c030b280290d1ecf3d744c7f0d71ecdafb9b02316655920d141d3"
+    if Hardware::CPU.arm?
+      url "https://github.com/webhookdb/webhookdb-cli/releases/download/0.13.0/webhookdb_0.13.0_macos_arm64.tar.gz"
+      sha256 "101783ab1a16ce4664ef0a2e86e2970a56d90a93bafcb343b2f94e5c987c7b5e"
 
       def install
         bin.install "webhookdb"
@@ -28,16 +28,16 @@ class Webhookdb < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lithictech/webhookdb-cli/releases/download/0.12.2/webhookdb_0.12.2_linux_arm64.tar.gz"
-      sha256 "daaef4b910a86a3e777f1aea8963fbe7747909156a6d4aa6ec56df3aa706afb2"
+      url "https://github.com/webhookdb/webhookdb-cli/releases/download/0.13.0/webhookdb_0.13.0_linux_arm64.tar.gz"
+      sha256 "cfcfc5b299a6dcc4149a02e3bfcde399a0d1ff776b0288a65cb649c806a604d3"
 
       def install
         bin.install "webhookdb"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lithictech/webhookdb-cli/releases/download/0.12.2/webhookdb_0.12.2_linux_x86_64.tar.gz"
-      sha256 "519b51b847ec56434d483b40923aa4770d20492c64c3b4b5e3d217ac88fae3ad"
+      url "https://github.com/webhookdb/webhookdb-cli/releases/download/0.13.0/webhookdb_0.13.0_linux_x86_64.tar.gz"
+      sha256 "57cc10f46824cbca1387e51a51dda00e63de51e4c56fc8d91e71132f22342e3c"
 
       def install
         bin.install "webhookdb"
