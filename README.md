@@ -1,13 +1,13 @@
 # Homebrew Tap for Webhookdb
 
-This repository is a Homebrew Tap for [lithictech/webhookdb-cli](https://github.com/lithictech/webhookdb-cli)
+This repository is a Homebrew Tap for [webhookdb/webhookdb-cli](https://github.com/webhookdb/webhookdb-cli)
 which is the CLI for [https://webhookdb.com](https://webhookdb.com).
 
 ## How do I install these formulae?
 
-`brew install lithictech/webhookdb-cli/webhookdb`
+`brew install webhookdb/webhookdb-cli/webhookdb`
 
-Or `brew tap lithictech/webhookdb-cli` and then `brew install webhookdb`.
+Or `brew tap webhookdb/webhookdb-cli` and then `brew install webhookdb`.
 
 ## Dev stuff
 
