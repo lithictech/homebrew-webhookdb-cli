@@ -5,20 +5,20 @@
 class Webhookdb < Formula
   desc "Query and store any API in real-time with SQL. More at https://webhookdb.com"
   homepage "https://webhookdb.com"
-  version "0.14.1"
+  version "0.15.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/webhookdb/webhookdb-cli/releases/download/0.14.1/webhookdb_0.14.1_macos_x86_64.tar.gz"
-      sha256 "ecc80a2d16f54f398c47c2963353669b2f3527e2e459a6c632c35fc9da1f4539"
+      url "https://github.com/webhookdb/webhookdb-cli/releases/download/0.15.0/webhookdb_0.15.0_macos_x86_64.tar.gz"
+      sha256 "3b15eac6b9cb47ffa9037e36e5ca4f4eb696a49a2f9716e03f5c231271378a2a"
 
       def install
         bin.install "webhookdb"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/webhookdb/webhookdb-cli/releases/download/0.14.1/webhookdb_0.14.1_macos_arm64.tar.gz"
-      sha256 "6be448f5a934110eee7e342fb8598c011b5c6d07afe025da46363a54d1e60e3f"
+      url "https://github.com/webhookdb/webhookdb-cli/releases/download/0.15.0/webhookdb_0.15.0_macos_arm64.tar.gz"
+      sha256 "d2d77f58224f53a96321879c20b015e21db7cfca04168af67c8ce7baa0b0dec8"
 
       def install
         bin.install "webhookdb"
@@ -27,17 +27,17 @@ class Webhookdb < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/webhookdb/webhookdb-cli/releases/download/0.14.1/webhookdb_0.14.1_linux_arm64.tar.gz"
-      sha256 "efa647ad4a7c9bf832121f10b5fd53a382cf32fb57bd89b65dcbcde8053cce9a"
+    if Hardware::CPU.intel?
+      url "https://github.com/webhookdb/webhookdb-cli/releases/download/0.15.0/webhookdb_0.15.0_linux_x86_64.tar.gz"
+      sha256 "54d43e34d2a6e57d0f02705f50923902415160b05d44afdfc8d32ce944fb000f"
 
       def install
         bin.install "webhookdb"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/webhookdb/webhookdb-cli/releases/download/0.14.1/webhookdb_0.14.1_linux_x86_64.tar.gz"
-      sha256 "5a0a0d5dafa8e4bf1f6659fa56cb05d7455213915f4432b218f64c8cc6b5a7e2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/webhookdb/webhookdb-cli/releases/download/0.15.0/webhookdb_0.15.0_linux_arm64.tar.gz"
+      sha256 "ceea1ae561949c05701361fe7226f00fdd024a7eda3f1154eca6a477fdf28a27"
 
       def install
         bin.install "webhookdb"
